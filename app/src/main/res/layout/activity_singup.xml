@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud"
+    android:orientation="vertical"
+    tools:context=".SingUp">
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:srcCompat="@drawable/iplant" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="29dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Name"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/surnameTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/surname"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="Surname"
+            android:inputType="text"
+            android:minHeight="48dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="21dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/birthdateTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Birthdate">
+
+        <EditText
+            android:id="@+id/birthdate"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="DD/MM/YY"
+            android:inputType="date"
+            android:minHeight="48dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/emailSingup"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="21dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/passwordSingup"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordconfirmTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/passwordconfirm"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="31dp" />
+
+    <Button
+        android:id="@+id/createAccount"
+        android:layout_width="339dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Create Account" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="TextView" />
+
+
+</LinearLayout>
+</ScrollView>

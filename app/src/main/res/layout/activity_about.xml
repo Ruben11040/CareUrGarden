@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="About As" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="352dp"
+        android:layout_height="453dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/mister" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Rubén Sepulveda Real" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="end"
+        android:text="IES EL RINCÓN - 2º DAM-M" />
+
+</LinearLayout>
