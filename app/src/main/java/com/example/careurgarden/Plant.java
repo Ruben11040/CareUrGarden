@@ -8,9 +8,8 @@ public class Plant implements Serializable {
     private String scientificName;
     private String name;
     private int image;
-    private String type;
-    //private String ;
-    private int averageHeight; // Grande , Mediana , y pequeña
+    private String type; //Secano o regadio
+    private int averageHeight; // cm
 
     public Plant(String scientificName, String name, int image, String type, int averageHeight) {
         this.scientificName = scientificName;

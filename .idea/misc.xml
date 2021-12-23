@@ -3,17 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/drawable/my_buttom.xml" value="0.2203125" />
-        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_about.xml" value="0.29767441860465116" />
-        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_account.xml" value="0.25416666666666665" />
+        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_account.xml" value="0.12360688956433637" />
+        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_heightplant.xml" value="0.25416666666666665" />
         <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_list.xml" value="0.25416666666666665" />
-        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_portada.xml" value="0.176" />
-        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_singin.xml" value="0.2" />
-        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_singup.xml" value="0.10187110187110188" />
-        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_usuario.xml" value="0.25416666666666665" />
-        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/list_plantas.xml" value="0.264" />
-        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/menu/menu_main.xml" value="0.1" />
+        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_namesplant.xml" value="0.4" />
+        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_singin.xml" value="0.12360688956433637" />
+        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_typeplant.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

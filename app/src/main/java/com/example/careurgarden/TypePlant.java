@@ -7,21 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Front extends AppCompatActivity {
-    private Button letBegin;
+public class TypePlant extends AppCompatActivity {
 
+    private Button siguiente;
+    /*
+    * Tipo de planta secano o regadío
+    * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_front);
+        setContentView(R.layout.activity_typeplant);
 
-        letBegin = findViewById(R.id.letBegin);
-
-        letBegin.setOnClickListener(new View.OnClickListener() {
+        siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =  new Intent(Front.this, SingIn.class);
-                startActivity(intent);
+                Intent i = new Intent(TypePlant.this, HeightPlant.class);
+                //Pasar un objeto planta
+
+                startActivity(i);
             }
         });
     }

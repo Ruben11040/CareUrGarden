@@ -7,21 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Front extends AppCompatActivity {
-    private Button letBegin;
+public class HeightPlant extends AppCompatActivity {
 
+    private Button siguiente;
+    /*
+    *   Spinner en centimertros
+    * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_front);
+        setContentView(R.layout.activity_heightplant);
 
-        letBegin = findViewById(R.id.letBegin);
-
-        letBegin.setOnClickListener(new View.OnClickListener() {
+        siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =  new Intent(Front.this, SingIn.class);
-                startActivity(intent);
+                Intent i = new Intent(HeightPlant.this, List.class);
+                //Pasar un objeto planta
+
+                startActivity(i);
             }
         });
     }

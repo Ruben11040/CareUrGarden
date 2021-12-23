@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Singin extends AppCompatActivity {
+public class SingIn extends AppCompatActivity {
     private Button signin;
     private Button signup;
     private EditText email;
@@ -32,7 +32,7 @@ public class Singin extends AppCompatActivity {
 
 
                 //Cursor c = db.rawQuery(" SELECT codigo,nombre FROM Usuarios WHERE nombre='usu1' ", null);
-                Intent intent =  new Intent(Singin.this, List.class);
+                Intent intent =  new Intent(SingIn.this, List.class);
                 startActivity(intent);
             }
         });
@@ -40,7 +40,7 @@ public class Singin extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =  new Intent(Singin.this, SingUp.class);
+                Intent intent =  new Intent(SingIn.this, SingUp.class);
                 startActivity(intent);
             }
         });

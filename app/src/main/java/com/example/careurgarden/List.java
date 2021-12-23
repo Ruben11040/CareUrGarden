@@ -2,42 +2,28 @@ package com.example.careurgarden;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 public class List extends AppCompatActivity {
 
     private ListView listView;
+    private Button createPlant;
     private int imagenView;
     private String name;
     private String scientificName;
@@ -65,6 +51,7 @@ public class List extends AppCompatActivity {
         scientificName = "";
         imagenView = 0;
         listView = findViewById(R.id.listView);
+        createPlant = findViewById(R.id.createPlant);
 
         AdaptadorPlant adaptador =
                 new AdaptadorPlant(this, data);
@@ -95,6 +82,13 @@ public class List extends AppCompatActivity {
             }
         });
 
+        createPlant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent(List.this,NamesPlant.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -147,7 +141,7 @@ public class List extends AppCompatActivity {
                 return true;
             case R.id.SubMnuOpc3:
                 //Cerrar sesion
-                Intent in =  new Intent(List.this, Singin.class);
+                Intent in =  new Intent(List.this, SingIn.class);
                 startActivity(in);
                 return true;
             default:

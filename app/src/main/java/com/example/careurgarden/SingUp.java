@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -59,7 +58,7 @@ public class SingUp extends AppCompatActivity {
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =  new Intent(SingUp.this,Singin.class);
+                Intent intent =  new Intent(SingUp.this, SingIn.class);
 
                 nameTil.setError(null);
                 surnameTil.setError(null);

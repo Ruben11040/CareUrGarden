@@ -22,4 +22,10 @@ public class Account extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 }
