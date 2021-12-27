@@ -6,7 +6,6 @@ import java.util.Date;
 
 public class User implements Serializable {
 
-    private int id;
     private String name;
     private String surname;
     private Date birthday;
@@ -14,22 +13,13 @@ public class User implements Serializable {
     private String password;
     private ArrayList<Plant> garden;
 
-    public User(int id, String name, String surname, Date birthday, String email, String password, ArrayList<Plant> garden) {
-        this.id = id;
+    public User(String name, String surname, Date birthday, String email, String password, ArrayList<Plant> garden) {
         this.name = name;
         this.surname = surname;
         this.birthday = birthday;
         this.email = email;
         this.password = password;
         this.garden = garden;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {

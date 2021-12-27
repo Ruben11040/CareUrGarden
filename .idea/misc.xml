@@ -3,12 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_about.xml" value="0.4" />
         <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_account.xml" value="0.12360688956433637" />
         <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_heightplant.xml" value="0.25416666666666665" />
         <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_list.xml" value="0.25416666666666665" />
         <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_namesplant.xml" value="0.4" />
         <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_singin.xml" value="0.12360688956433637" />
-        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_typeplant.xml" value="0.25416666666666665" />
+        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_singup.xml" value="0.1175925925925926" />
+        <entry key="..\:/2anoDAM/PGL/CareUrGarden/app/src/main/res/layout/activity_typeplant.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -7,12 +7,32 @@
     android:orientation="vertical"
     tools:context=".HeightPlant">
 
+    <TextView
+        android:id="@+id/txtHight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Ejemplo SeekBar"
+        android:textColor="#000"
+        android:textSize="50sp"  />
+
+    <SeekBar
+
+        android:id="@+id/seekbar"
+        android:layout_width="337dp"
+        android:layout_height="61dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="#ccc" />
+
     <Button
-        android:id="@+id/siguiente"
+        android:id="@+id/create"
         android:layout_width="162dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="200dp"
-        android:text="Siguiente" />
+        android:layout_marginTop="50dp"
+        android:text="Create" />
 
 </LinearLayout>

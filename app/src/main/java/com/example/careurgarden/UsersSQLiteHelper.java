@@ -2,25 +2,17 @@ package com.example.careurgarden;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 
 public class UsersSQLiteHelper extends SQLiteOpenHelper {
 
-    String sqlCreate = "CREATE TABLE Users (id INTEGER PRIMARY KEY AUTOINCREMENT," +
-            " name TEXT," +
-            " surname TEXT," +
-            " birthday DATE," +
-            " email TEXT," +
-            " password TEXT," +
-            " garden ARRAYLIST)";
+    String sqlCreate = "CREATE TABLE Users (name TEXT, surname TEXT, birthday DATE, email TEXT PRIMARY KEY, password TEXT, garden ARRAYLIST)";
 
-    private static final String DB_NAME = "Users.db";
+    private static final String DB_NAME = "Users";
     private static final int DB_VERSION = 1;
 
-    public UsersSQLiteHelper(Context contexto, String name,
-                             SQLiteDatabase.CursorFactory factory, int version) {
+    public UsersSQLiteHelper(Context contexto) {
         super(contexto, DB_NAME, null, DB_VERSION);
     }
 
@@ -41,7 +33,7 @@ public class UsersSQLiteHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS Users");
 
         //Se crea la nueva versión de la tabla
-        onCreate(db);
+        db.execSQL(sqlCreate);
 
     }
 }

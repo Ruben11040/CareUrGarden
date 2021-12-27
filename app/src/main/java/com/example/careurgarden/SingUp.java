@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,7 @@ public class SingUp extends AppCompatActivity {
     private TextInputLayout nameTil;
     private EditText surname;
     private TextInputLayout surnameTil;
-    private EditText birthdate;
+    private EditText birthday;
     private EditText email;
     private TextInputLayout emailTil;
     private EditText password;
@@ -31,17 +32,14 @@ public class SingUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singup);
 
-        UsersSQLiteHelper ussqlh = new UsersSQLiteHelper(this,"Users.db",null, 1 );
+        UsersSQLiteHelper ussqlh = new UsersSQLiteHelper(this);
         SQLiteDatabase db = ussqlh.getWritableDatabase();
-
-
-
 
         name = findViewById(R.id.name);
         nameTil = findViewById(R.id.nameTil); // errores de cada uno de los campos
         surname = findViewById(R.id.surname);
         surnameTil = findViewById(R.id.surnameTil);
-        birthdate = findViewById(R.id.birthdate);
+        birthday = findViewById(R.id.birthdate);
         email = findViewById(R.id.emailSingup);
         emailTil = findViewById(R.id.emailTil);
         password = findViewById(R.id.passwordSingup);
@@ -58,7 +56,7 @@ public class SingUp extends AppCompatActivity {
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =  new Intent(SingUp.this, SingIn.class);
+                Intent intent = new Intent(SingUp.this, SingIn.class);
 
                 nameTil.setError(null);
                 surnameTil.setError(null);
@@ -66,53 +64,62 @@ public class SingUp extends AppCompatActivity {
                 passwordTil.setError(null);
                 passwordConfirmTil.setError(null);
 
-                if (password.getText().toString() == passwordConfirm.getText().toString()
+                if (!password.getText().toString().equals(passwordConfirm.getText().toString())
                         || name.getText().toString().isEmpty()
                         || surname.getText().toString().isEmpty()
-                        || birthdate.getText().toString().isEmpty()
+                        || birthday.getText().toString().isEmpty()
                         || email.getText().toString().isEmpty()
                         || password.getText().toString().isEmpty()
                         || passwordConfirm.getText().toString().isEmpty()) {
+
                     // Mostrar error del password confirm
 
-                    if(name.getText().toString().isEmpty())
+                    if (name.getText().toString().isEmpty())
                         nameTil.setError("Introduzca el nombre");
-                    if(surname.getText().toString().isEmpty())
+                    if (surname.getText().toString().isEmpty())
                         surnameTil.setError("Introduzca los apellidos");
-                    if(email.getText().toString().isEmpty())
+                    if (email.getText().toString().isEmpty())
                         emailTil.setError("Introduzca un email");
-                    if(password.getText().toString().isEmpty())
+                    if (password.getText().toString().isEmpty())
                         passwordTil.setError("Introduzca una contraseña");
-                    if(passwordConfirm.getText().toString().isEmpty())
+                    if (passwordConfirm.getText().toString().isEmpty())
                         passwordConfirmTil.setError("Introduzca la confirmación de la contraseña");
-                    else if(password.getText().toString() == passwordConfirm.getText().toString()){
+                    if (!password.getText().toString().equals(passwordConfirm.getText().toString()))
                         passwordConfirmTil.setError("La contraseña de confirmación no es igual a la contraseña");
-                    }
 
-                }/*else if(){
-                    buscar en la base de datos si hay otro registro igual
-                }*/else{
-                    if (db != null) {
+                }else {
 
-                        //Insertamos los datos en la tabla Usuarios
+                    String e = email.getText().toString();
+                    String[] args = new String[]{e};
+
+                    Cursor cursor = db.rawQuery("SELECT email FROM Users WHERE email = ?", args);
+
+                    if (db != null || cursor.moveToFirst()) {
+
+                        // TODO mensaje de error en el email
+                        emailTil.setError("Este email ya se encuentra registrado");
+
+                    } else {
+                        //Insertamos los datos en la tabla Users
 
                         ContentValues cv = new ContentValues();
                         cv.put("name", name.getText().toString());
                         cv.put("surname", surname.getText().toString());
-                        cv.put("birthday", birthdate.getText().toString());
+                        cv.put("birthday", birthday.getText().toString());
                         cv.put("email", email.getText().toString());
                         cv.put("password", password.getText().toString());
 
                         //db.execSQL("INSERT INTO Users ( name, surname, birthday, email, password ) VALUES ('" + name + "', '" + surname + "','" + birthdate + "','" + email + "','" + password + "') ");
 
-                        db.insert("Users",null, cv);
+                        db.insert("Users", null, cv);
                         db.close();
 
 
                         startActivity(intent);
+
+
                     }
                 }
-
             }
         });
     }

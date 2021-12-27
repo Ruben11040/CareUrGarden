@@ -132,18 +132,22 @@ public class List extends AppCompatActivity {
                 return true;
             case R.id.SubMnuOpc1:
                 //Cuenta
-
-                return true;
-            case R.id.SubMnuOpc2:
-                //Acerca de
-                Intent intent =  new Intent(List.this, About.class);
+                Intent intent =  new Intent(List.this, Account.class);
                 startActivity(intent);
                 return true;
-            case R.id.SubMnuOpc3:
-                //Cerrar sesion
-                Intent in =  new Intent(List.this, SingIn.class);
+
+            case R.id.SubMnuOpc2:
+                //Acerca de
+                Intent in=  new Intent(List.this, About.class);
                 startActivity(in);
                 return true;
+
+            case R.id.SubMnuOpc3:
+                //Cerrar sesion
+                Intent i =  new Intent(List.this, SingIn.class);
+                startActivity(i);
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }

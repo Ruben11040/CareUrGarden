@@ -7,12 +7,36 @@
     android:orientation="vertical"
     tools:context=".TypePlant">
 
+    <RadioGroup
+        android:id="@+id/typeButton"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/regadioButton"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:text="Regadio" />
+
+        <RadioButton
+            android:id="@+id/secanoButton"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Secano" />
+
+    </RadioGroup>
+
     <Button
         android:id="@+id/siguiente"
         android:layout_width="162dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="50dp"
         android:text="Siguiente" />
 
 </LinearLayout>
